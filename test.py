@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 from sqlalchemy import create_engine, text
-from test import perform_advanced_sql_queries
+from assignment import perform_advanced_sql_queries
 
 class TestAdvancedSQL(unittest.TestCase):
     def setUp(self):
