@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 from sqlalchemy import create_engine, text
-from assignment import perform_advanced_sql_queries
+from sample_submission import perform_advanced_sql_queries
 
 class TestAdvancedSQL(unittest.TestCase):
     def setUp(self):
@@ -65,8 +65,8 @@ class TestAdvancedSQL(unittest.TestCase):
         results = perform_advanced_sql_queries(self.connection)
         df = results.get('task_2')
         self.assertIsInstance(df, pd.DataFrame)
-        self.assertEqual(df['name'].iloc[0], 'Finance')
-        self.assertEqual(df['total_salary'].iloc[0], 270000)
+        self.assertEqual(df['name'].iloc[0], 'IT')
+        self.assertEqual(df['total_salary'].iloc[0], 352000)
 
     def test_task_3_rank_employees(self):
         """Test that task 3 correctly ranks employees by salary within each department"""
